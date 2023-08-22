@@ -4,7 +4,7 @@ An efficient meeting scheduling system using C/C++ on Unix, leveraging
 backend (UDP connection) and main (TCP connection) servers to identify 
 optimal meeting times for participants based on their availability. 
 
-6 files: README, Makefile, serverM.c, serverA.c, serverB.c, and client.c
+8 files: README, a.txt, b.txt, Makefile, serverM.c, serverA.c, serverB.c, and client.c
    
 Code files: serverM.c, serverA.c, serverB.c, and client.c.
 
