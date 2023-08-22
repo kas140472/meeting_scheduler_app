@@ -1,6 +1,6 @@
-# Meeting Scheduler Application using Socket Programming
+## Meeting Scheduler Application using Socket Programming
 
-- an efficient meeting scheduling system using C/C++ on Unix, leveraging 
+An efficient meeting scheduling system using C/C++ on Unix, leveraging 
 backend (UDP connection) and main (TCP connection) servers to identify 
 optimal meeting times for participants based on their availability. 
 
