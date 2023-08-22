@@ -4,7 +4,7 @@ An efficient meeting scheduling system using C/C++ on Unix, leveraging
 backend (UDP connection) and main (TCP connection) servers to identify 
 optimal meeting times for participants based on their availability. 
 
-8 files: README, a.txt, b.txt, Makefile, serverM.c, serverA.c, serverB.c, and client.c
+6 files: README, Makefile, serverM.c, serverA.c, serverB.c, and client.c
    
 Code files: serverM.c, serverA.c, serverB.c, and client.c.
 
@@ -13,7 +13,7 @@ a.txt for backend server A and b.txt for backend server B.
 The two files share the same format as follows:
    The file contains a list of time availability for a group of individuals identified by their
    usernames. The format of the time availability information stored in the file for a specific
-   user is provided below.
+   user is provided:
    user3;[[5,10],[11,16]]
 
 
