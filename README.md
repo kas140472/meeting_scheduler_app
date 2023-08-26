@@ -1,25 +1,32 @@
 ## Meeting Scheduler Application using Socket Programming
 
-![img1](https://github.com/kas140472/meeting_scheduler_app/edit/main/serverAB_mixed2.png?raw=true)
-
 An efficient meeting scheduling system using C/C++ on Unix, leveraging 
 backend (UDP connection) and main (TCP connection) servers to identify 
 optimal meeting times for participants based on their availability. 
 
-6 files: README, Makefile, serverM.c, serverA.c, serverB.c, and client.c
+![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/serverAB_mixed2.png?raw=true)
+
+8 files: README, a.txt, b.txt, Makefile, serverM.c, serverA.c, serverB.c, client.c
    
 Code files: serverM.c, serverA.c, serverB.c, and client.c.
 
 Input Files:
-a.txt for backend server A and b.txt for backend server B. 
+a.txt is the file containing usernames and availabilities for backend server A and b.txt is the file containing usernames and availabilities for backend server B. 
 The two files share the same format as follows:
    The file contains a list of time availability for a group of individuals identified by their
    usernames. The format of the time availability information stored in the file for a specific
    user is provided:
-   user3;[[5,10],[11,16]]
+   username;[[5,10],[11,16]]
 
+Preview of a.txt file:
 
-How it works:
+![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/a_txt_img.png?raw=true)
+
+Preview of b.txt file:
+
+![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/b_txt_img.png?raw=true)
+
+How the application works:
 serverM stores the usernames obtained from servers A and B. Then it
 waits for the client to send user-entered usernames. It stores these
 usernames and compares them with usernames of server A and B. It figures
@@ -32,6 +39,38 @@ then prints those usernames as 'not existing'. Server A and B compute the
 intersection of the intervals of the usernames received from Server M. 
 They send the result to Server M. Server M coputes the intersection 
 between the intersections received from A and B and sends it to client.
+
+Workflow:
+
+Start ServerM:
+
+ ![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/serverM_start.png?raw=true)
+
+Start ServerA:
+
+ ![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/serverA_start.png?raw=true)
+
+Start ServerB:
+
+ ![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/serverB_start.png?raw=true)
+
+Start Client:
+
+ ![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/client_start.png?raw=true)
+
+Enter names of meeting participants to obtain their common availability:
+
+ ![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/serverAB_mixed2.png?raw=true)
+
+Test cases:
+
+1. None of the names entered by the user exist in the database of either Server A or Server B
+
+   ![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/all_names_dne_2.png?raw=true)
+
+2. Duplicate names entered by user
+
+   ![img1](https://github.com/kas140472/meeting_scheduler_app/blob/main/only_serverA_repeated_name.png?raw=true)
    
    
 Format of messages:
