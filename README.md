@@ -114,3 +114,5 @@ Reused code:
 NOTE: I have used sleep() commands in some places to ensure that 
       send and receive functions are in sync. So there may be a delay of
       a couple of seconds for the results to show up in the terminal. 
+
+Project sourced from USC EE450 course (this project was part of the Computer Networks course)
